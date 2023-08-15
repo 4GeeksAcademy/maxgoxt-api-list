@@ -25,6 +25,7 @@ const Home = () => {
 	}
 
 	async function addTask() {
+		console.log(todos);
 		try {
 			let response = await fetch('https://playground.4geeks.com/apis/fake/todos/user/maxgoxt', {
 				method: 'PUT',
@@ -91,6 +92,7 @@ const Home = () => {
 					})}
 			</ul>
 			<small className="fw-light">{todos.length} tareas pendientes</small>
+			<button onClick={() =>{setTodos([{label:'terminé todo'}])}}>Terminé todo</button>
 		</div>
 	);
 };
